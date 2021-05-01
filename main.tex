@@ -1,8 +1,11 @@
 \documentclass{article}
 \usepackage[backend=biber,citestyle=ieee]{biblatex}
 
-\usepackage{float}
+\usepackage[english]{babel}
+% \usepackage[swedish]{babel}
 
+\usepackage{csquotes}
+\usepackage{float}
 \usepackage{datetime}
 
 % \usepackage{a4wide} 
@@ -15,11 +18,12 @@
 \newcommand{\getauthor}{Oscar Fredriksson} %Author
 \newcommand{\gettitle}{Title goes here} %Title
 
-\newdateformat{monthyear}{\monthname[\THEMONTH] \THEYEAR} %Date
+\newdateformat{daymonthyear}{\ordinal{DAY} \monthname[\THEMONTH] \THEYEAR} %Date
 
 \title{\gettitle}
 \author{\getauthor}
-\monthyear
+
+\date{\daymonthyear\today} %Remove for swedish date
 
 \begin{document}
 

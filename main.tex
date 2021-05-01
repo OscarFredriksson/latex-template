@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage[backend=biber,citestyle=ieee]{biblatex}
+
+\usepackage{float}
+
+\usepackage{datetime}
+
+% \usepackage{a4wide} 
+
+\usepackage{fancyhdr}   %page header
+\pagestyle{fancy}
+
+\addbibresource{sources.bib}
+
+\newcommand{\getauthor}{Oscar Fredriksson} %Author
+\newcommand{\gettitle}{Title goes here} %Title
+
+\newdateformat{monthyear}{\monthname[\THEMONTH] \THEYEAR} %Date
+
+\title{\gettitle}
+\author{\getauthor}
+\monthyear
+
+\begin{document}
+
+    % Title 
+    \pagenumbering{gobble}
+    \maketitle
+    \newpage
+
+    % Page header and footer
+    \pagenumbering{arabic}
+    \fancyhf{}
+    \lhead{\getauthor}
+    \rhead{\gettitle}
+    \rfoot \thepage
+
+    % Document starts here
+    \section{First section goes here}
+    \cite{template}
+
+    % Sources
+    \newpage
+    \printbibliography
+
+\end{document}
+
+% Centered figure with caption:
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=1\textwidth]{%path} 
+%     \caption{}
+%     \label{fig:}
+% \end{figure}
+
+% Side by side figures:
+% \begin{figure}[H]
+%     \centering
+%     \subfloat{{\includegraphics[width=0.46\textwidth]{%path} }}%
+%     \qquad
+%     \subfloat{{\includegraphics[width=0.46\textwidth]{%path} }}%
+%     \caption{}
+%     \label{fig:}
+% \end{figure}
+
+% Table with caption:
+% \begin{table}[H]      
+%     \begin{center}
+%     \begin{tabular}{|c|c|} 
+%         \hline
+%          &  \\\hline\hline
+%          &  \\\hline 
+%     \end{tabular}
+%     \end{center}
+%     \caption{}
+%     \label{tab:}
+% \end{table}

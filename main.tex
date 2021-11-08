@@ -1,30 +1,28 @@
 \documentclass{article}
 \usepackage[backend=biber,citestyle=ieee]{biblatex}
-
 \usepackage[english]{babel}
 % \usepackage[swedish]{babel}
-
 \usepackage{csquotes}
 \usepackage{float}
 \usepackage{datetime}
 \usepackage[title]{appendix}
 
-
-% \usepackage{a4wide} 
-
 \usepackage{fancyhdr}   %page header
+% \usepackage{a4wide}   %wider paper
+
+\usepackage{pgfgantt}
+
+
 \pagestyle{fancy}
 
 \addbibresource{sources.bib}
 
 \newcommand{\getauthor}{Oscar Fredriksson} %Author
 \newcommand{\gettitle}{Title goes here} %Title
-
 \newdateformat{daymonthyear}{\ordinal{DAY} \monthname[\THEMONTH] \THEYEAR} %Date
 
 \title{\gettitle}
 \author{\getauthor}
-
 \date{\daymonthyear\today} %Remove for swedish date
 
 \begin{document}
@@ -43,7 +41,13 @@
 
     % Document starts here
     \section{First section goes here}
-    \cite{template}
+    This \cite{template} is a reference
+
+    \section{Examples}
+
+    \subsection{Gantt chart}
+    
+    \input{examples/gantt.tex}
 
     % Sources
     \newpage

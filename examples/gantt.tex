@@ -1,0 +1,60 @@
+\ganttset{group/.append style={orange},
+milestone/.append style={red},
+progress label node anchor/.append style={text=red}}
+
+
+\newcommand\Dganttbar[4]{%
+    \ganttbar[inline=false]{#1}{#3}{#4}\ganttbar[inline,bar label font=\footnotesize]{\textbf{#2}}{#3}{#4}
+}
+
+\begin{figure}[H]
+    \begin{center}
+        \begin{ganttchart}[%Specs
+        y unit title=0.5cm,
+        y unit chart=0.6cm,
+        x unit=0.6cm,
+        vgrid,hgrid,
+        title height=1,
+        % title/.style={fill=none},
+        title label font=\bfseries\footnotesize,
+        bar/.style={fill=cyan},
+        bar top shift=0.2,
+        bar height=0.6,
+        milestone top shift=0.3,
+        milestone height=0.6,
+        milestone/.append style={xscale=0.8},
+        progress label text={},
+        group right shift=0,
+        group top shift=0.5,
+        group height=.2,
+        group peaks width={0.1},
+        inline]{1}{12}
+        %labels
+		\gantttitle[]{October}{4}
+        \gantttitle[]{November}{4}
+        \gantttitle[]{December}{4} \\
+		\gantttitle{41}{1} 
+        \gantttitle{42}{1} 
+        \gantttitle{43}{1} 
+        \gantttitle{44}{1} 
+        \gantttitle{45}{1} 
+        \gantttitle{46}{1}
+        \gantttitle{47}{1} 
+        \gantttitle{48}{1}
+        \gantttitle{49}{1}
+        \gantttitle{50}{1}
+        \gantttitle{51}{1}
+        \gantttitle{52}{1}
+        \\
+
+        %\ganttgroup[inline=false]{Group 1}{1}{5}\\ 
+		\ganttbar[inline=false]{This is an activity}{1}{4}\\
+        \Dganttbar{This has some text on the bar}{details or something here}{4}{12}\\
+		\ganttmilestone[inline=false]{This is a milestone}{10}
+        
+        \end{ganttchart}
+        \caption{Gantt chart example}        
+        \label{fig:ganttchart}
+
+    \end{center}
+\end{figure}

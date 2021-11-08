@@ -2,20 +2,58 @@
 \usepackage[backend=biber,citestyle=ieee]{biblatex}
 \usepackage[english]{babel}
 % \usepackage[swedish]{babel}
+<<<<<<< HEAD
+=======
+\usepackage{graphicx}
+>>>>>>> 23730497e18dce82e45f85c34a57275b785e7f15
 \usepackage{csquotes}
 \usepackage{float}
 \usepackage{datetime}
 \usepackage[title]{appendix}
+<<<<<<< HEAD
 
 \usepackage{fancyhdr}   %page header
 % \usepackage{a4wide}   %wider paper
 
 \usepackage{pgfgantt}
 
+=======
+% \usepackage{a4wide} %For wider content on page
+% \usepackage{amsmath} %For multiline equations 
+>>>>>>> 23730497e18dce82e45f85c34a57275b785e7f15
 
 \pagestyle{fancy}
 
-\addbibresource{sources.bib}
+% \usepackage[parfill]{parskip} %Line skip between paragraphs instead of indent
+
+\usepackage{xcolor}
+\usepackage{listings}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.95}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=false,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=1
+}
+\lstset{style=mystyle}
+
+%\addbibresource{sources.bib}
 
 \newcommand{\getauthor}{Oscar Fredriksson} %Author
 \newcommand{\gettitle}{Title goes here} %Title
@@ -50,8 +88,8 @@
     \input{examples/gantt.tex}
 
     % Sources
-    \newpage
-    \printbibliography
+    %\newpage
+    %\printbibliography
 
     % Appendices
     % \newpage
@@ -63,6 +101,11 @@
     % \end{appendices}
 
 \end{document}
+
+% list with a,b,c
+% \begin{enumerate}[label=(\alph*)]
+%     \item 
+% \end{enumerate}
 
 % Centered figure with caption:
 % \begin{figure}[H]
@@ -94,3 +137,19 @@
 %     \caption{}
 %     \label{tab:}
 % \end{table}
+
+% Equation on multiple lines
+% \begin{equation}
+%    \begin{split}
+%        x &= y \\
+%        y &= z
+%    \end{split}
+% \end{equation}
+
+% Code snippet
+% \begin{lstlisting}%[language=]
+%    //Code here
+% \end{lstlisting}
+
+% Code snippet from source file 
+% \lstinputlisting[language=]{%path}
